@@ -1,8 +1,10 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<!--  <nav class="navbar navbar-light bg-light">-->
+<!--    <div class="container-fluid">-->
+<!--      <span class="navbar-brand mx-auto text-dark">Welcome to my first portfolio, l am Jordan Velkovski</span>-->
+<!--    </div>-->
+<!--  </nav>-->
+  <HelloWorld/>
 </template>
 
 <script>
