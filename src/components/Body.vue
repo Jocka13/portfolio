@@ -19,7 +19,9 @@
               </ul>
             </div>
             <div class="col col-9">
-              <p>I am a simple guy that wants to learn new stuff everyday. I believe that everything is going to be degitialized soon.</p>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
             </div>
           </div>
           <div class="row">
@@ -30,7 +32,9 @@
                 <h6>Participant at Bike Computer Co</h6>
                 <p class="mb-1"><small>July 2022 - Present</small></p>
               </ul>
-              <p class="fs-6">This is my first time beeing participant here in this company. For the first week l am very satisfied how the work is going. I haven't work anywhere else before.</p>
+              <p class="fs-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
             </div>
           </div>
           <div class="row mt-3">
@@ -38,9 +42,70 @@
               <ul class="list-inline mb-0">
                 <h6>Full stack developer for my needs</h6>
               </ul>
-              <p class="fs-6">I have made several project for my faculty that l go currently, but l haven't done big projects for some other companies.</p>
+              <p class="fs-6 mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged.
+                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
           </div>
+          <div class="row mt-3">
+            <div class="col col-11">
+              <ul class="list-inline mb-0">
+                <h6 class="mb-0">Skills</h6>
+              </ul>
+              <p class="fs-6">
+              <div class="d-flex align-items-center">
+              <span>Bootstrap</span>
+                <div class="ratings ms-3">
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                </div>
+              </div>
+              </p>
+              <p class="fs-6">
+              <div class="d-flex align-items-center">
+                <span>JavaScript</span>
+                <div class="ratings ms-3">
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                </div>
+              </div>
+              </p>
+              <p class="fs-6">
+              <div class="d-flex align-items-center">
+                <span>HTML</span>
+                <div class="ratings ms-3">
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                </div>
+              </div>
+              </p>
+              <p class="fs-6">
+              <div class="d-flex align-items-center">
+                <span>CSS</span>
+                <div class="ratings ms-3">
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                </div>
+              </div>
+              </p>
+            </div>
+          </div>
+
+
         </div>
       </section>
     </main>

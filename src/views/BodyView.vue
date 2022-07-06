@@ -9,7 +9,9 @@
 import Body from "@/components/Body";
 export default {
 name: "BodyView",
-  components: {Body}
+  components: {
+       Body
+  }
 }
 </script>
 
