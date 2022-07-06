@@ -42,6 +42,17 @@
             </div>
           </div>
           <div class="row mt-3">
+            <div class="col col-11 mb-0">
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item fa-2x fs-3"><i class="fa fa-university" aria-hidden="true"></i></li>
+                <li class="list-inline-item fs-4 fw-bolder">Education</li>
+                <h6>Student at Faculty of computer science and technology</h6>
+                <p class="mb-1"><small>Started 2019</small></p>
+              </ul>
+              <p class="fs-6">{{ stringLongerTextLorem }}</p>
+            </div>
+          </div>
+          <div class="row mt-3">
             <div class="col col-11">
               <ul class="list-inline mb-0">
                 <h6 class="mb-0">Skills</h6>
@@ -82,6 +93,17 @@
               </p>
               <p class="fs-6">
               <div class="d-flex align-items-center">
+                <span class="justify-content-between">{{ CsharpNET }}</span>
+                <div class="ratings ms-3">
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                </div>
+              </div>
+              </p>
+              <p class="fs-6">
+              <div class="d-flex align-items-center">
                 <span class="justify-content-between">{{ CSS }}</span>
                 <div class="ratings ms-3">
                   <i class="fa fa-star rating-color"></i>
@@ -113,6 +135,7 @@
    name: 'Body',
    data(){
      return {
+       CsharpNET : 'C#.net',
        CSS : 'CSS',
        SQL : 'SQL',
        HTML : 'HTML',
