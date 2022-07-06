@@ -1,8 +1,6 @@
-<template>
-  <div>
-    <p>Primer text</p>
-  </div>
-</template>
+ <template>
+   
+ </template>
 
 <script>
 

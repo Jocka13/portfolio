@@ -19,9 +19,7 @@
               </ul>
             </div>
             <div class="col col-9">
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              <p>{{ stringShortTextLorem }}</p>
             </div>
           </div>
           <div class="row">
@@ -32,9 +30,7 @@
                 <h6>Participant at Bike Computer Co</h6>
                 <p class="mb-1"><small>July 2022 - Present</small></p>
               </ul>
-              <p class="fs-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              <p class="fs-6">{{ stringShortTextLorem }}</p>
             </div>
           </div>
           <div class="row mt-3">
@@ -42,13 +38,7 @@
               <ul class="list-inline mb-0">
                 <h6>Full stack developer for my needs</h6>
               </ul>
-              <p class="fs-6 mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged.
-                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+              <p class="fs-6 mb-0">{{ stringLongerTextLorem }}</p>
             </div>
           </div>
           <div class="row mt-3">
@@ -58,7 +48,7 @@
               </ul>
               <p class="fs-6">
               <div class="d-flex align-items-center">
-              <span>Bootstrap</span>
+              <span class="justify-content-between">{{ BS }}</span>
                 <div class="ratings ms-3">
                   <i class="fa fa-star rating-color"></i>
                   <i class="fa fa-star rating-color"></i>
@@ -68,19 +58,7 @@
               </p>
               <p class="fs-6">
               <div class="d-flex align-items-center">
-                <span>JavaScript</span>
-                <div class="ratings ms-3">
-                  <i class="fa fa-star rating-color"></i>
-                  <i class="fa fa-star rating-color"></i>
-                  <i class="fa fa-star rating-color"></i>
-                  <i class="fa fa-star rating-color"></i>
-                  <i class="fa fa-star rating-color"></i>
-                </div>
-              </div>
-              </p>
-              <p class="fs-6">
-              <div class="d-flex align-items-center">
-                <span>HTML</span>
+                <span class="justify-content-between">{{ JS }}</span>
                 <div class="ratings ms-3">
                   <i class="fa fa-star rating-color"></i>
                   <i class="fa fa-star rating-color"></i>
@@ -92,10 +70,32 @@
               </p>
               <p class="fs-6">
               <div class="d-flex align-items-center">
-                <span>CSS</span>
+                <span class="justify-content-between">{{ HTML }}</span>
                 <div class="ratings ms-3">
                   <i class="fa fa-star rating-color"></i>
                   <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                </div>
+              </div>
+              </p>
+              <p class="fs-6">
+              <div class="d-flex align-items-center">
+                <span class="justify-content-between">{{ CSS }}</span>
+                <div class="ratings ms-3">
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                  <i class="fa fa-star rating-color"></i>
+                </div>
+              </div>
+              </p>
+              <p class="fs-6">
+              <div class="d-flex align-items-center">
+                <span class="justify-content-between">{{ SQL }}</span>
+                <div class="ratings ms-3">
                   <i class="fa fa-star rating-color"></i>
                   <i class="fa fa-star rating-color"></i>
                   <i class="fa fa-star rating-color"></i>
@@ -104,10 +104,31 @@
               </p>
             </div>
           </div>
-
-
         </div>
       </section>
     </main>
 </template>
-
+<script>
+ export default {
+   name: 'Body',
+   data(){
+     return {
+       CSS : 'CSS',
+       SQL : 'SQL',
+       HTML : 'HTML',
+       BS : 'BootStrap',
+       JS : 'JavaScript',
+       stringShortTextLorem : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n' +
+           '                Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,\n' +
+           '                when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+       stringLongerTextLorem : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n' +
+           '                Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,\n' +
+           '                when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n' +
+           '                It has survived not only five centuries, but also the leap into electronic typesetting,\n' +
+           '                remaining essentially unchanged.\n' +
+           '                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,\n' +
+           '                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
+     }
+   }
+ }
+</script>
