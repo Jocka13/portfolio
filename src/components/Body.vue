@@ -53,11 +53,11 @@
               <p class="fs-6">{{ stringLongerTextLorem }}</p>
             </div>
           </div>
+          <button class="btn btn-primary" @click="hideParagraph">Add the skill list</button>
           <div class="row mt-3" v-if="hide">
             <div class="col col-11">
               <ul class="list-inline mb-0">
                 <li class="list-inline-item fs-4 fw-bolder"><h6 class="mb-0">Skills</h6></li>
-                <li class="list-inline-item fs-4 fw-bolder"><button class="btn btn-danger" @click="hideParagraph">Remove the list</button></li>
               </ul>
               <p class="fs-6">
                 <div class="d-flex align-items-center">
@@ -128,6 +128,10 @@
               </p>
             </div>
           </div>
+          <ul class="list-inline">
+            <li class="list-inline-item"><button class="btn btn-success" @click="increaseCounter">Increase the counter</button></li>
+            <li class="list-inline-item">{{ counter }}</li>
+          </ul>
         </div>
       </section>
     </main>
@@ -135,18 +139,10 @@
 <script>
  export default {
    name: 'Body',
-   methods:{
-     deleteRow(){
-       this.seen = false
-     },
-     hideParagraph(){
-       this.hide = false
-     }
-
-   },
    data(){
      return {
-       hide: true,
+       counter: 0,
+       hide: false,
        seen : true,
        CsharpNET : 'C#.net',
        CSS : 'CSS',
@@ -165,6 +161,21 @@
            '                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,\n' +
            '                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
      }
+   },
+   methods: {
+     deleteRow() {
+       this.seen = false
+     },
+     hideParagraph() {
+       this.hide = true
+     },
+     increaseCounter() {
+       if (this.counter >= 20) {
+         return
+       }
+       this.counter++
+     }
    }
+
  }
 </script>
