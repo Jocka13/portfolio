@@ -2,7 +2,7 @@
     <main>
       <section>
         <div class="container">
-          <div class="row row-cols-auto mx-auto mt-3">
+          <div class="row row-cols-auto mt-3">
              <div class="col">
                <img alt="jocka-jpg" src="../assets/images/jocka-image.jpg" width="120" height="120"/>
              </div>
@@ -22,11 +22,12 @@
               <p>{{ stringShortTextLorem }}</p>
             </div>
           </div>
-          <div class="row">
+          <div class="row" v-if="seen">
             <div class="col col-11 mb-0">
               <ul class="list-inline mb-0">
                 <li class="list-inline-item fa-2x fs-3"><i class="fa fa-suitcase" aria-hidden="true"></i></li>
                 <li class="list-inline-item fs-4 fw-bolder">Employment history</li>
+                <li class="list-inline-item fs-4 fw-bolder"><button @click="deleteRow" class="btn btn-danger">Remove this paragraph</button></li>
                 <h6>Participant at Bike Computer Co</h6>
                 <p class="mb-1"><small>July 2022 - Present</small></p>
               </ul>
@@ -52,20 +53,21 @@
               <p class="fs-6">{{ stringLongerTextLorem }}</p>
             </div>
           </div>
-          <div class="row mt-3">
+          <div class="row mt-3" v-if="hide">
             <div class="col col-11">
               <ul class="list-inline mb-0">
-                <h6 class="mb-0">Skills</h6>
+                <li class="list-inline-item fs-4 fw-bolder"><h6 class="mb-0">Skills</h6></li>
+                <li class="list-inline-item fs-4 fw-bolder"><button class="btn btn-danger" @click="hideParagraph">Remove the list</button></li>
               </ul>
               <p class="fs-6">
-              <div class="d-flex align-items-center">
-              <span class="justify-content-between">{{ BS }}</span>
-                <div class="ratings ms-3">
-                  <i class="fa fa-star rating-color"></i>
-                  <i class="fa fa-star rating-color"></i>
-                  <i class="fa fa-star rating-color"></i>
+                <div class="d-flex align-items-center">
+                  <span class="justify-content-between">{{ BS }}</span>
+                    <div class="ratings ms-3">
+                      <i class="fa fa-star rating-color"></i>
+                      <i class="fa fa-star rating-color"></i>
+                      <i class="fa fa-star rating-color"></i>
+                    </div>
                 </div>
-              </div>
               </p>
               <p class="fs-6">
               <div class="d-flex align-items-center">
@@ -92,15 +94,15 @@
               </div>
               </p>
               <p class="fs-6">
-              <div class="d-flex align-items-center">
-                <span class="justify-content-between">{{ CsharpNET }}</span>
-                <div class="ratings ms-3">
-                  <i class="fa fa-star rating-color"></i>
-                  <i class="fa fa-star rating-color"></i>
-                  <i class="fa fa-star rating-color"></i>
-                  <i class="fa fa-star rating-color"></i>
-                </div>
-              </div>
+                <div class="d-flex align-items-center">
+                 <span class="justify-content-between">{{ CsharpNET }}</span>
+                   <div class="ratings ms-3">
+                      <i class="fa fa-star rating-color"></i>
+                      <i class="fa fa-star rating-color"></i>
+                      <i class="fa fa-star rating-color"></i>
+                      <i class="fa fa-star rating-color"></i>
+                   </div>
+                 </div>
               </p>
               <p class="fs-6">
               <div class="d-flex align-items-center">
@@ -133,8 +135,19 @@
 <script>
  export default {
    name: 'Body',
+   methods:{
+     deleteRow(){
+       this.seen = false
+     },
+     hideParagraph(){
+       this.hide = false
+     }
+
+   },
    data(){
      return {
+       hide: true,
+       seen : true,
        CsharpNET : 'C#.net',
        CSS : 'CSS',
        SQL : 'SQL',
