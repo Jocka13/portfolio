@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <div class="col col-2">
+    <div class="col col-6">
       <h6 class="fs-5">Details</h6>
       <p class="fw-light fs-6 mb-0">{{info.streeth}}</p>
       <p class="fw-light fs-6 mb-0">{{info.hometown}}</p>

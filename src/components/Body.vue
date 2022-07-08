@@ -3,7 +3,7 @@
       <section>
         <div class="container">
           <div class="row row-cols-auto mt-3">
-            <div class="col col-2">
+            <div class="col col-xl-1 col-lg-2 col-md-3 col-sm-3 col-3">
               <div class="ratio ratio-1x1">
                 <img alt="jocka-jpg" src="../assets/images/jocka-image.jpg" class="object-fit-cover"/>
               </div>
@@ -137,7 +137,7 @@
             <li class="list-inline-item"><button class="btn btn-danger" @click="decreaseCounter">Decrease the counter</button></li>
           </ul>
           <hr class="my-1">
-         <Details :infoDetails="info"/>
+         <Details/>
         </div>
       </section>
     </main>
