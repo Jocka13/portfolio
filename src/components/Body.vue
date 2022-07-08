@@ -3,9 +3,11 @@
       <section>
         <div class="container">
           <div class="row row-cols-auto mt-3">
-             <div class="col">
-               <img alt="jocka-jpg" src="../assets/images/jocka-image.jpg" width="120" height="120"/>
-             </div>
+            <div class="col col-2">
+              <div class="ratio ratio-1x1">
+                <img alt="jocka-jpg" src="../assets/images/jocka-image.jpg" class="object-fit-cover"/>
+              </div>
+            </div>
              <div class="col">
                <h4>Jordan Velkovski</h4>
                <span>Full-stack Developer</span>
@@ -53,21 +55,21 @@
               <p class="fs-6">{{ stringLongerTextLorem }}</p>
             </div>
           </div>
-          <button class="btn btn-primary" @click="hideParagraph">Add the skill list</button>
-          <div class="row mt-3" v-if="hide">
-            <div class="col col-11">
+          <button class="btn btn-primary" @click="addSkillList">Add the skill list</button>
+          <div class="row mt-3">
+            <div class="col col-11" v-if="hide">
               <ul class="list-inline mb-0">
                 <li class="list-inline-item fs-4 fw-bolder"><h6 class="mb-0">Skills</h6></li>
               </ul>
               <p class="fs-6">
-                <div class="d-flex align-items-center">
-                  <span class="justify-content-between">{{ BS }}</span>
-                    <div class="ratings ms-3">
-                      <i class="fa fa-star rating-color"></i>
-                      <i class="fa fa-star rating-color"></i>
-                      <i class="fa fa-star rating-color"></i>
-                    </div>
+              <div class="d-flex align-items-center">
+                <span class="justify-content-between">{{ BS }}</span>
+                <div class="ratings ms-3">
+                <i class="fa fa-star rating-color"></i>
+                <i class="fa fa-star rating-color"></i>
+                <i class="fa fa-star rating-color"></i>
                 </div>
+              </div>
               </p>
               <p class="fs-6">
               <div class="d-flex align-items-center">
@@ -97,10 +99,10 @@
                 <div class="d-flex align-items-center">
                  <span class="justify-content-between">{{ CsharpNET }}</span>
                    <div class="ratings ms-3">
-                      <i class="fa fa-star rating-color"></i>
-                      <i class="fa fa-star rating-color"></i>
-                      <i class="fa fa-star rating-color"></i>
-                      <i class="fa fa-star rating-color"></i>
+                   <i class="fa fa-star rating-color"></i>
+                   <i class="fa fa-star rating-color"></i>
+                   <i class="fa fa-star rating-color"></i>
+                   <i class="fa fa-star rating-color"></i>
                    </div>
                  </div>
               </p>
@@ -129,16 +131,22 @@
             </div>
           </div>
           <ul class="list-inline">
+            <span class="me-2">This counter goes to 20 and -20</span>
             <li class="list-inline-item"><button class="btn btn-success" @click="increaseCounter">Increase the counter</button></li>
             <li class="list-inline-item">{{ counter }}</li>
+            <li class="list-inline-item"><button class="btn btn-danger" @click="decreaseCounter">Decrease the counter</button></li>
           </ul>
+          <hr class="my-1">
+         <Details :infoDetails="info"/>
         </div>
       </section>
     </main>
 </template>
 <script>
+ import Details from "@/components/Details";
  export default {
    name: 'Body',
+   components: {Details},
    data(){
      return {
        counter: 0,
@@ -166,7 +174,7 @@
      deleteRow() {
        this.seen = false
      },
-     hideParagraph() {
+     addSkillList() {
        this.hide = true
      },
      increaseCounter() {
@@ -174,8 +182,16 @@
          return
        }
        this.counter++
+     },
+     decreaseCounter(){
+       if(this.counter <= -20) {
+         return
+       }
+       this.counter--
      }
+   },
+   props:{
+     infoDetails : Object
    }
-
  }
 </script>
